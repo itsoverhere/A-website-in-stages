@@ -9,17 +9,19 @@ html, body{
 }
 
 section.section-intro{
-    height:100%;
+    height:100%; /* of given grid space*/
     width:100%;
     
     display:grid;
     grid-template-rows: 80px 1fr;
     grid-template-columns: 1fr;
+    
 }
-
-header{
+div.greeting{
     grid-row: 2/3;
-    padding-left: 3%;
+    width:100%;
+    padding-left:5%;
+    box-sizing: border-box;
     
     background-color: #05386b;
     
@@ -37,8 +39,14 @@ nav{
     width:100%;
     padding:20px;
     box-sizing: border-box;
+        
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:10;
     
     background-color: #04213e;
+    box-shadow: 0px 1px 2px 2px rgba(30,30,30,0.3);
     
     display: grid;
     grid-template-columns: 32px auto;
@@ -52,19 +60,21 @@ nav ul{
     display:flex;
     flex-direction: row;
     justify-content: flex-end;   
+    
 }
 
 nav ul li{
     display:inline-block;
+    margin: 16px;
+}
+
+nav>ul>li:hover {
+	background-color:rgba(256,256,256,0.1);
 }
 
 nav ul li a{
     color: white;
     text-decoration: none;
-}
-
-nav ul li{
-    margin: 16px;
 }
 
 nav img{
@@ -81,12 +91,14 @@ nav img:hover{
     transition: opacity 0.5s ease-in;
 }
 
-section{    
+section.section-research,section.section-work,section.section-about-me{    
     display: grid;
     grid-template-columns: auto 60% auto;   
+    
+    padding-bottom:24px;
 }
 
-section > div{
+section.section-work > div,section.section-research > div,section.section-about-me > div{
     grid-column: 2/3;
     padding:48px;
 }
@@ -101,6 +113,7 @@ section.section-work{
 
 section.section-about-me{
     background-color: #4cc482;
+    
 }
 
 section.section-research, section.section-about-me{
@@ -138,7 +151,7 @@ article.paper a:hover{
 }
 
 article.work a:hover{
-    background-color: rgba(256,256,256,0.5);
+    background-color: rgba(237, 245, 225, 0.5);
 }
 
 article.paper div.paper-author{
