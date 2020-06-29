@@ -29,7 +29,7 @@ div.greeting{
     align-content: center;
     
     font-family:"Lucida Console"; 
-    font-size: 7em;
+    font-size: 4em;
     color:white;
 }
 
@@ -196,23 +196,22 @@ article.work img{
 article.work{
     background-color:white;
     
-    
     box-sizing: border-box;
     padding: 18px;
     margin-right: 1rem;
-    
     border: 2px solid #fcfcfc;
 	box-shadow: 0 1px 10px rgba(34, 25, 25, 0.1);
+    border-radius: 8px;
+    
+    line-height: 1.6em;
+    
+    transition: opacity .4s ease-in-out;
     
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     
-    
-    line-height: 1.6em;
-    
-    transition: opacity .4s ease-in-out;
 }
 
 div.grid-work:hover article.work:not(:hover) {

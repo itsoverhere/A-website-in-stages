@@ -9,6 +9,42 @@
 
         <meta name="theme-color" content="#ffffff">
         
+        <script src="jquery.js"></script>
+        <script src="typist.js"></script>
+        
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        
+        <script>
+//            
+            $(document).ready(function(){
+//                $('.greeting').typist({
+//                    speed: 5,
+//                    text: 'Hi, I\'m Courtney!',
+//                    cursor:false
+//                });
+                
+                var app = document.getElementById('greeting');
+
+                var typewriter = new Typewriter(app, {
+                    loop: true,
+                    cursor: ""
+                });
+
+                typewriter.typeString('Hi!')
+                    .pauseFor(500)
+                    .deleteChars(1)
+                    .typeString(', my name is Courtney 👩🏻')
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .typeString('Welcome to my website!')
+                    .pauseFor(2500)
+                    .start();
+                
+                
+
+            });
+        </script>
+        
         <title>
             Courtney
         </title>
@@ -29,8 +65,8 @@
                     <li><a href="#about-me">About Me</a></li>
                 </ul>
             </nav>
-            <div class="greeting">
-                Hi, I'm Courtney!
+            <div class="greeting" id="greeting">
+<!--                Hi, I'm Courtney!-->
             </div>
         </section>
         
