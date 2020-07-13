@@ -234,24 +234,24 @@ article.work div.work-title, article.work div.work-description{
     margin-bottom: 8px;
 }
 
-footer{
+body>footer{
     height:30%;
     background-color: #04213e;
 }
 
-footer > div{
+body>footer > div{
     color:white;
     font-size: 0.8em;
     font-family: "Roboto";
     padding:16px;
 }
 
-footer a{
+body>footer a{
     color: #5cdb95;
     text-decoration: none;
 }
 
-footer a:hover{
+body>footer a:hover{
     background-color: rgba(256,256,256, 0.1);
 }
 
